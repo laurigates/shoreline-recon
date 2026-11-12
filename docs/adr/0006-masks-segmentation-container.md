@@ -53,7 +53,15 @@ run does not. Every other frame is at 0.955 or above.
    (0.73–0.91 on Laajasalo and Vartiosaari), the wet gravel is not (0.55 or below). Cutting by
    probability alone also dropped real water: the low-confidence band along the shore and
    water seen through a railing, which the cut separates from the main body. Wet gravel away
-   from the water has no seed and stays unmasked. `water_min_prob` and `water_min_area` at 0,
+   from the water has no seed and stays unmasked. The first defaults (`water_bridge` 0.02,
+   `water_seed_prob` 0.7) also released real water on three reviewed frames (#12): distant
+   water beyond reeds at mean 0.64–0.68 (Vartiosaari 00001, 00004), and water seen through a
+   railing at mean 0.21 with a gap of 0.031 of the image width to the main body (Laajasalo
+   00035). On 15 probe frames the 14 dropped ground regions had means of 0.14–0.43 and gaps
+   of 0.051 or more, and any bridge of 0.025–0.04 with a seed probability of 0.6 or below
+   masked the three water regions and none of the ground. The defaults are now 0.03 and 0.6.
+   Re-running both clips changed 20 of 199 frames, all toward more masking, and none of the
+   frames where the gravel was released. `water_min_prob` and `water_min_area` at 0,
    or `water_seed_prob` at 0, give plain argmax; the stage passes all four after the
    positional arguments. The gating
    lives in `regions.py` beside `segment.py` in the image.
