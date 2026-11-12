@@ -6,11 +6,11 @@
 
 **Water-aware photogrammetry and Gaussian splatting for shoreline structures**
 
-[![CI](https://github.com/laurigates/shore-recon/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/laurigates/shore-recon/actions/workflows/ci.yml)
-[![Containers](https://github.com/laurigates/shore-recon/actions/workflows/containers.yml/badge.svg?branch=main)](https://github.com/laurigates/shore-recon/actions/workflows/containers.yml)
+[![CI](https://github.com/laurigates/shoreline-recon/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/laurigates/shoreline-recon/actions/workflows/ci.yml)
+[![Containers](https://github.com/laurigates/shoreline-recon/actions/workflows/containers.yml/badge.svg?branch=main)](https://github.com/laurigates/shoreline-recon/actions/workflows/containers.yml)
 [![Rust](https://img.shields.io/badge/rust-1.99.1-orange)](rust-toolchain.toml)
-[![License](https://img.shields.io/github/license/laurigates/shore-recon)](LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/laurigates/shore-recon)](https://github.com/laurigates/shore-recon/stargazers)
+[![License](https://img.shields.io/github/license/laurigates/shoreline-recon)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/laurigates/shoreline-recon)](https://github.com/laurigates/shoreline-recon/stargazers)
 
 <img src="assets/banner.jpg" alt="Vartiosaari pier from one camera position: Gaussian splat on the left, textured mesh with its synthetic water plane on the right" width="100%">
 
@@ -50,7 +50,7 @@ processing-step videos (`--videos`). How each tool runs, locally, in a container
 that host, is machine configuration: see [docs/configuration.md](docs/configuration.md).
 
 Other installs: the shell installer and archives for macOS (Apple Silicon) and Linux
-(x86_64) on the [releases page](https://github.com/laurigates/shore-recon/releases), or
+(x86_64) on the [releases page](https://github.com/laurigates/shoreline-recon/releases), or
 from source ([docs/development.md](docs/development.md)). Homebrew installs the shell
 completions; for the others, see [shell completions](docs/usage.md#shell-completions).
 

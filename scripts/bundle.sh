@@ -27,7 +27,7 @@ for ds in "$@"; do
     gauss=$(jq -r '.stages[] | select(.stage=="post") | .metrics.gaussians' "${E}report.json")
     cat >"$out/README.txt" <<EOF
 shoreline-recon v1: $ds${SHORELINE_DEMO_PLACE:+ ($SHORELINE_DEMO_PLACE)}
-${SHORELINE_DEMO_CAPTURED:+${SHORELINE_DEMO_CAPTURED^}. }Pipeline commit $commit (github.com/laurigates/shore-recon),
+${SHORELINE_DEMO_CAPTURED:+${SHORELINE_DEMO_CAPTURED^}. }Pipeline commit $commit (github.com/laurigates/shoreline-recon),
 export $(basename "$E").
 
 mesh/model.glb
