@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.7.1](https://github.com/laurigates/shoreline-recon/compare/v0.7.0...v0.7.1) (2026-11-12)
+
+
+### Bug Fixes
+
+* **deps:** bump rustix to 1.1.6 for RUSTSEC-2026-0486 ([#122](https://github.com/laurigates/shoreline-recon/issues/122)) ([7da8f95](https://github.com/laurigates/shoreline-recon/commit/7da8f9588f051a948aa522c26366fb187713c48f)), closes [#120](https://github.com/laurigates/shoreline-recon/issues/120)
+* **masks:** keep small cut-off water masked under the water gating ([a6c75c0](https://github.com/laurigates/shoreline-recon/commit/a6c75c0b6843e1f0ea31d2f889db82f53d5ed8c2)), closes [#12](https://github.com/laurigates/shoreline-recon/issues/12)
+
 ## [0.7.0](https://github.com/laurigates/shore-recon/compare/v0.6.0...v0.7.0) (2026-11-02)
 
 
