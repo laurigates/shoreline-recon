@@ -58,8 +58,12 @@ run does not. Every other frame is at 0.955 or above.
    water beyond reeds at mean 0.64–0.68 (Vartiosaari 00001, 00004), and water seen through a
    railing at mean 0.21 with a gap of 0.031 of the image width to the main body (Laajasalo
    00035). On 15 probe frames the 14 dropped ground regions had means of 0.14–0.43 and gaps
-   of 0.051 or more, and any bridge of 0.025–0.04 with a seed probability of 0.6 or below
+   of 0.051 or more, and any bridge of 0.025–0.04 with a seed probability of 0.45–0.6
    masked the three water regions and none of the ground. The defaults are now 0.03 and 0.6.
+   A gap here is the smallest pixel distance between a region and the kept water. It is not
+   the value to set `water_bridge` to: the disk closing joins straight edges up to about twice
+   the bridge apart and corners only when closer, so the working range comes from running the
+   gating on the dumps, not from comparing gaps with the bridge.
    Re-running both clips changed 20 of 199 frames, all toward more masking, and none of the
    frames where the gravel was released. `water_min_prob` and `water_min_area` at 0,
    or `water_seed_prob` at 0, give plain argmax; the stage passes all four after the
