@@ -74,5 +74,22 @@ passes `--decimate <ratio>` with ratio = `post.target_faces * dense.texture_head
 - The flag is omitted when the ratio would be 1 or more, or the mesh has no faces. The ratio is
   written with six decimals and clamped to 1e-6, because OpenMVS reads 0 as "auto".
 - `mesh.ply` and the `mesh_faces` metric remain the undecimated `ReconstructMesh` output.
-- Pending: re-running dense on both datasets on the GPU host, the resulting face counts, and a
-  speckle check of the mesh videos.
+- Measured on the GPU host on 2026-10-31 with a release binary built from a341a0e
+  (`shoreline-recon run configs/<dataset>.toml --stage video`, both runs exit 0; details in the
+  [validation comment on #109](https://github.com/laurigates/shoreline-recon/pull/109#issuecomment-6549877663)):
+
+  | | Laajasalo | Vartiosaari |
+  |---|---|---|
+  | `ReconstructMesh` faces | 1,902,183 | 2,711,528 |
+  | `--decimate` ratio | 0.249713 | 0.175178 |
+  | Post `mesh_faces_in` | 474,975 | 474,964 |
+  | Post `mesh_faces` (final) | 465,133 | 460,739 |
+  | `TextureMesh` time, before | 455 s | 1377 s |
+  | `TextureMesh` time, after | 110.8 s | 102.2 s |
+
+  Both `model.glb` are under `post.target_faces` (500,000), and post's "over
+  post.target_faces" warning did not fire. Frames from `mesh-arc.mp4` and `mesh-drone.mp4` of
+  both datasets show no black speckles on the decks. The "before" times come from earlier runs
+  on a different frame set. On the same vartiosaari `scene_dense.mvs` and `mesh.ply`,
+  `TextureMesh` took 787 s without `--decimate` (wall time of the `apptainer exec`) against
+  102.2 s with it (#41).
