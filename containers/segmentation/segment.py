@@ -19,10 +19,10 @@ Seeds are the pixels whose argmax is a water class, whose water probability
 --water-min-prob (default 0.5), and whose 4-connected seed component touches
 the bottom row or covers at least --water-min-area of the image (default
 0.02). Every argmax-water pixel connected to a seed is then kept, with gaps up
-to --water-bridge of the image width bridged (default 0.02; railing bars), so
+to --water-bridge of the image width bridged (default 0.03; railing bars), so
 low-probability water next to the main body stays masked while wet gravel away
 from it does not. A water region whose mean water probability is at least
---water-seed-prob (default 0.7) seeds itself, so confident distant water cut
+--water-seed-prob (default 0.6) seeds itself, so confident distant water cut
 off by a dock or a treeline stays masked. --water-min-prob and --water-min-area
 at 0, or --water-seed-prob at 0, give plain argmax for every class.
 """
@@ -96,8 +96,8 @@ def main() -> int:
     # both flags from [masks], which is the source of truth.
     ap.add_argument("--water-min-prob", type=float, default=0.5, help="minimum water probability (default 0.5)")
     ap.add_argument("--water-min-area", type=float, default=0.02, help="minimum inland water area fraction (default 0.02)")
-    ap.add_argument("--water-bridge", type=float, default=0.02, help="gap bridged between water regions, fraction of width (default 0.02)")
-    ap.add_argument("--water-seed-prob", type=float, default=0.7, help="mean water probability that seeds a region (default 0.7)")
+    ap.add_argument("--water-bridge", type=float, default=0.03, help="gap bridged between water regions, fraction of width (default 0.03)")
+    ap.add_argument("--water-seed-prob", type=float, default=0.6, help="mean water probability that seeds a region (default 0.6)")
     ap.add_argument("images", type=Path, nargs="?")
     ap.add_argument("out", type=Path, nargs="?")
     args = ap.parse_args()

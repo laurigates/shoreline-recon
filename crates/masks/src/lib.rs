@@ -377,9 +377,9 @@ mod tests {
             "--water-min-area",
             "0.02",
             "--water-bridge",
-            "0.02",
+            "0.03",
             "--water-seed-prob",
-            "0.7",
+            "0.6",
         ]
         .map(OsString::from)
         .into();

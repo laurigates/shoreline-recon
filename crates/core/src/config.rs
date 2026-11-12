@@ -643,8 +643,8 @@ mod tests {
         let defaults = with_overrides("").unwrap();
         assert_eq!(defaults.masks.water_min_prob, 0.5);
         assert_eq!(defaults.masks.water_min_area, 0.02);
-        assert_eq!(defaults.masks.water_bridge, 0.02);
-        assert_eq!(defaults.masks.water_seed_prob, 0.7);
+        assert_eq!(defaults.masks.water_bridge, 0.03);
+        assert_eq!(defaults.masks.water_seed_prob, 0.6);
         for key in [
             "water_min_prob",
             "water_min_area",
