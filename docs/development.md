@@ -7,8 +7,8 @@ rustup selects inside the repository), [just](https://github.com/casey/just),
 [cargo-nextest](https://nexte.st), ffmpeg and `python3`.
 
 ```sh
-git clone https://github.com/laurigates/shore-recon.git
-cd shore-recon
+git clone https://github.com/laurigates/shoreline-recon.git
+cd shoreline-recon
 cp .env.example .env   # optional settings for the recipes
 just build             # target/release/shoreline-recon
 ```
@@ -32,7 +32,7 @@ environment variables, for example `SHORELINE_TEST_SFM_DIR` and
 ## Layout
 
 ```
-shore-recon/
+shoreline-recon/
 ├── crates/
 │   ├── cli/          # clap entrypoint (binary: shoreline-recon)
 │   ├── core/         # config layers, user dirs, DAG, fingerprints, Stage trait, cache, pipeline, tool runner

@@ -7,8 +7,8 @@ version = "0.7.0" # x-release-please-version
 edition = "2024"
 rust-version = "1.85"
 license = "MIT"
-repository = "https://github.com/laurigates/shore-recon"
-homepage = "https://github.com/laurigates/shore-recon"
+repository = "https://github.com/laurigates/shoreline-recon"
+homepage = "https://github.com/laurigates/shoreline-recon"
 publish = false
 
 [workspace.dependencies]

@@ -56,7 +56,7 @@ RUN ldd /usr/local/bin/OpenMVS/* | awk '/=> \// {print $3}' | xargs -r readlink 
 
 FROM ubuntu:24.04@sha256:fe81560990fae86dc4743202b2cb4d3df98d0bcf949173cecef15ce1127ef852
 
-LABEL org.opencontainers.image.source="https://github.com/laurigates/shore-recon" \
+LABEL org.opencontainers.image.source="https://github.com/laurigates/shoreline-recon" \
       org.opencontainers.image.description="shoreline-recon dense backend: OpenMVS v2.4.0 (CPU)"
 
 COPY --from=build /runtime-packages /tmp/runtime-packages
