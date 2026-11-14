@@ -43,7 +43,7 @@ RUN mkdir /opt/fonts && cp /usr/share/fonts/truetype/noto/NotoSans-Regular.ttf \
         /usr/share/fonts/truetype/noto/NotoSans-Bold.ttf \
         /usr/share/fonts/truetype/noto/NotoSansMono-Regular.ttf /opt/fonts/
 
-FROM ubuntu:24.04@sha256:fe81560990fae86dc4743202b2cb4d3df98d0bcf949173cecef15ce1127ef852
+FROM ubuntu:24.04@sha256:2198e4c65076e9cb0b3d695219df667c0e3b0072da64ca3c2648aca17dcecaf5
 
 LABEL org.opencontainers.image.source="https://github.com/laurigates/data-processing" \
       org.opencontainers.image.description="shoreline-recon showcase video renderer: gsplat 1.5.3 (CUDA sm_89), moderngl (EGL), SVT-AV1"
